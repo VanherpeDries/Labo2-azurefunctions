@@ -12,10 +12,10 @@ using Newtonsoft.Json;
 
 namespace NMCT.Cloud1.labo2oef1
 {
-    public static class helloFunction
+    public static class TestParameters
     {
-        [FunctionName("helloFunction")]
-        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequest req, ILogger log)
+        [FunctionName("TestParameters")]
+        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "name/{myname}")]HttpRequest req,String myname, ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -30,5 +30,4 @@ namespace NMCT.Cloud1.labo2oef1
                 : new BadRequestObjectResult("Please pass a name on the query string or in the request body");
         }
     }
-    
 }
