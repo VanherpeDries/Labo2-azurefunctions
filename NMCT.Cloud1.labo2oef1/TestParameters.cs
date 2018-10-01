@@ -17,9 +17,10 @@ namespace NMCT.Cloud1.labo2oef1
         [FunctionName("TestParameters")]
         public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "som/{getal1}/{getal2")]HttpRequest req,int getal1 , int getal2, ILogger log)
         {
-            int som = getal2 + getal1;
+            
             log.LogInformation("C# HTTP trigger function processed a request.");
-            return (ActionResult)new OkObjectResult(som);
+            int som = getal2 + getal1;
+            return new OkObjectResult(som);
                
         }
     }
