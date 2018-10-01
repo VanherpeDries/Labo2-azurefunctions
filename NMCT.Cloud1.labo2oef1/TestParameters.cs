@@ -15,7 +15,7 @@ namespace NMCT.Cloud1.labo2oef1
     public static class TestParameters
     {
         [FunctionName("TestParameters")]
-        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "som/{getal1}/{getal2")]HttpRequest req,int getal1 , int getal2, ILogger log)
+        public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "caluclator/som/{getal1}/{getal2}")]HttpRequest req,int getal1 , int getal2, ILogger log)
         {
             
             log.LogInformation("C# HTTP trigger function processed a request.");
